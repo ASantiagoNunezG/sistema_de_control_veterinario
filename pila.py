@@ -10,6 +10,9 @@ class Pila:
     def __init__(self):
         self.elementos = []
     
+    def __str__(self):
+        return str(self.elementos)
+
     def pila_vacia(self):
         if len(self.elementos) == 0:
             return True
@@ -32,9 +35,10 @@ class Pila:
         pila_vacia = self.pila_vacia()
         if pila_vacia is False:
             for i in range(len(pila)):
+                print('''___________ 1 ___________''')
                 print(pila[-1 + (-i)])
         else:
-            print('Lista vacia')        
+            print('Pila vacia')        
 
     def tamano(self):
         print(len(self.elementos))

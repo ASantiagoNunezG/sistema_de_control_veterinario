@@ -1,19 +1,15 @@
-'''
-Encolar: Agregar un elemento al final de la cola.
-Desencolar: Quitar y recuperar el elemento en la parte delantera de la cola.
-Verificación de vacío: Comprobar si la cola está vacía.
-Tamaño: Obtener el número de elementos en la cola.
-Frente: Observar el elemento en la parte delantera de la cola sin eliminarlo.
-Limpieza: Vaciar la cola eliminando todos los elementos.
-'''
-class Fila:
+class Cola:
 
     #constructor
     def __init__(self):
         self.elementos = []
+        
+    def __str__(self):
+        return str(self.elementos)
     
     def mostrar(self):
-        print(self.elementos)
+        for i in self.elementos:
+            print(i)
     
     def fila_vacia(self):
         if len(self.elementos) == 0:
@@ -38,3 +34,4 @@ class Fila:
 
     def limpieza(self):
         del(self.elementos[:])
+
